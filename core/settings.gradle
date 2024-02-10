@@ -1,0 +1,3 @@
+rootProject.name = "fw.core"
+
+include "core-logging:core-logging"
