@@ -12,7 +12,6 @@ public class Slf4jLoggerTests {
 
 	@Test
 	public void test() {
-
 		FindByLogMessagePort findByLogMessage = logRequest -> Optional.of(ImmutableLog.builder())
 			.map(builder -> builder
 				.logId(ImmutableLogId.builder()

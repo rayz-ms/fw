@@ -2,4 +2,7 @@ rootProject.name = "core"
 
 include "core-logging:core-logging"
 include "core-logging:core-logging-adapter:spring-data-jpa"
+include "core-logging:core-logging-adapter:resourcebundle"
+include "core-logging:core-logging-adapter:os"
+include "core-logging:core-logging-adapter:remote"
 include "core-logging:core-logging-processor:slf4j"
