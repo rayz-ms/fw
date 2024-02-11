@@ -1,4 +1,4 @@
-package com.ggar.fw.core.logging.domain;
+package com.ggar.core.logging.domain;
 
 public interface Application {
     

@@ -1,11 +1,11 @@
-package com.ggar.fw.core.logging.domain;
+package com.ggar.core.logging.domain;
 
 import org.immutables.value.Value;
 
 import java.nio.charset.Charset;
 import java.util.Collection;
-import java.util.List;
 import java.util.Locale;
+import java.util.Optional;
 
 @Value.Immutable
 public interface Log {
@@ -14,6 +14,6 @@ public interface Log {
 	String message();
 	Charset charset();
 	Locale locale();
-	Collection<StackTraceElement> stacktrace();
+	Optional<Collection<StackTraceElement>> stacktrace();
 
 }
