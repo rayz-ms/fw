@@ -1,7 +1,7 @@
-package com.ggar.fw.core.logging.repository;
+package com.ggar.core.logging.repository;
 
-import com.ggar.fw.core.logging.domain.Log;
-import com.ggar.fw.core.logging.domain.LogRequest;
+import com.ggar.core.logging.domain.Log;
+import com.ggar.core.logging.domain.LogRequest;
 
 import java.util.Optional;
 import java.util.function.Function;
