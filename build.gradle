@@ -4,27 +4,26 @@ plugins {
     id "maven-publish"
 }
 
-allprojects {
-    group = "com.ggar.core.logging"
-    version = "1.0-SNAPSHOT"
-    publishing {
-        repositories {
-            maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/rayz-ms/fw")
-                credentials {
-                    username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                    password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
-                }
-            }
-        }
-        publications {
-            gpr(MavenPublication) {
-
+group = "com.ggar.core.logging"
+version = "1.0-SNAPSHOT"
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/rayz-ms/fw")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
             }
         }
     }
+publications {
+    gpr(MavenPublication) {
+
+        }
+    }
 }
+
 
 repositories {
     mavenCentral()
