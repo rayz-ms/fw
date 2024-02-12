@@ -1,17 +1,15 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-}
-
-plugins {
-    id "java"
-}
-
 dependencies {
     implementation project(":core-logging:core-logging")
 }
 
-repositories {
-    mavenCentral()
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        gpr(MavenPublication) {
+
+        }
+    }
 }

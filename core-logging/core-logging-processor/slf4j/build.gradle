@@ -1,23 +1,18 @@
-plugins {
-    id "java"
-}
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-
     implementation project(":core-logging:core-logging")
 
     implementation group: 'org.slf4j', name: 'slf4j-api', version: "2.0.12"
     implementation group: 'org.slf4j', name: 'slf4j-simple', version: "2.0.12"
-
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.10.2'
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.10.2'
-
 }
 
 test {
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        gpr(MavenPublication) {
+
+        }
+    }
 }
