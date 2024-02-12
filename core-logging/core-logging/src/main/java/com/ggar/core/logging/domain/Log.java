@@ -8,9 +8,10 @@ import java.util.Locale;
 import java.util.Optional;
 
 @Value.Immutable
-public interface Log {
+public interface Log<T extends LogId> {
 
-	LogId logId();
+	T logId();
+	LogLevel logLevel();
 	String message();
 	Charset charset();
 	Locale locale();

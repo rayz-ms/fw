@@ -25,10 +25,10 @@ public class Slf4jLogger extends AbstractLogger implements ProcessSingleLogMessa
 		Optional<Log> optional = this.apply(logRequest, new ArrayList<>());
 		if (optional.isPresent()) {
 			Log log = optional.get(); // orElse error message
-			switch (LogLevels.valueOf(log.logId().logLevel().get())) {
-				case E -> logger.error(String.format("%s-%s-%s: %s", log.logId().application().get(), log.logId().subsystem().get(), log.logId().id(), log.message()));
-				case W -> logger.warn(String.format("%s-%s-%s: %s", log.logId().application().get(), log.logId().subsystem().get(), log.logId().id(), log.message()));
-				default -> logger.error(String.format("%s not supported", log.logId().logLevel()));
+			switch (LogLevels.valueOf(log.logLevel().get())) {
+//				case E -> logger.error(String.format("%s-%s-%s: %s", log.logId().application().get(), log.logId().subsystem().get(), log.logId().id(), log.message()));
+//				case W -> logger.warn(String.format("%s-%s-%s: %s", log.logId().application().get(), log.logId().subsystem().get(), log.logId().id(), log.message()));
+				default -> logger.error(String.format("%s not supported", log.logLevel()));
 			}
 		}
 
