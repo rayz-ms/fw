@@ -1,5 +1,6 @@
 dependencies {
-    implementation project(":core-logging:core-logging")
+    api project(":core-logging:core-logging")
+    api 'org.springframework.data:spring-data-jpa:3.2.2'
 }
 
 test {

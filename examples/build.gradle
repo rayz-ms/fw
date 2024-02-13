@@ -3,11 +3,4 @@ project.gradle.startParameter.excludedTaskNames.addAll("test", "publish", "javad
 subprojects {
     apply plugin: "java"
     apply plugin: "org.springframework.boot:3.2.2"
-    apply plugin: 'io.spring.dependency-management'
-
-    dependencyManagement {
-        imports {
-            mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
-        }
-    }
 }

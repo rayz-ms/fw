@@ -1,5 +1,7 @@
 package com.ggar.core.logging.domain;
 
-public interface LogId {
+public interface LogId<I> {
+
+	I id();
 
 }

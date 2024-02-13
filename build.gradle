@@ -40,4 +40,8 @@ allprojects {
         withSourcesJar()
         withJavadocJar()
     }
+
+    java {
+        sourceCompatibility = 17
+    }
 }

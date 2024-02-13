@@ -6,14 +6,9 @@ import java.nio.charset.Charset;
 import java.util.Locale;
 import java.util.Optional;
 
-@Value.Immutable
-@Value.Style(allMandatoryParameters = true)
-public interface LogRequest extends LogId {
+public interface LogRequest<T extends LogId<?>> {
 
-	@Value.Parameter(order = 5, value = false)
 	Optional<Charset> charset();
-
-	@Value.Parameter(order = 6, value = false)
 	Optional<Locale > locale();
 
 }

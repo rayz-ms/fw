@@ -1,0 +1,11 @@
+dependencies {
+    implementation 'com.h2database:h2:2.2.224'
+    implementation project(":core-logging:core-logging-adapter:spring-data-jpa")
+    implementation 'org.springframework.boot:spring-boot-autoconfigure:3.2.2'
+    implementation 'org.springframework.boot:spring-boot:3.2.2'
+
+    annotationProcessor group: 'org.immutables', name: 'value', version: '2.10.0'
+    compileOnly group: 'org.immutables', name: 'value', version: '2.10.0'
+    annotationProcessor group: 'org.immutables', name: 'builder', version: '2.10.0'
+    compileOnly group: 'org.immutables', name: 'builder', version: '2.10.0'
+}
