@@ -1,7 +1,7 @@
 package com.ggar.core.examples.domain;
 
-public interface System {
-
-	String get();
-
+public class System extends Field<String> implements SystemBase {
+	public System(String get) {
+		super(get);
+	}
 }

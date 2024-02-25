@@ -1,6 +1,25 @@
-project.gradle.startParameter.excludedTaskNames.addAll("test", "publish", "javadocJar", "sourcesJar", "jar", "check")
-
 subprojects {
     apply plugin: "java"
-    apply plugin: "org.springframework.boot:3.2.2"
+
+    dependencies {
+        implementation 'org.yaml:snakeyaml:2.2'
+    }
+}
+
+jar {
+    enabled = false
+}
+javadoc {
+    enabled = false
+}
+compileJava {
+    enabled = false
+}
+subprojects {
+//    jar {
+//        enabled = false
+//    }
+    javadoc {
+        enabled = false
+    }
 }

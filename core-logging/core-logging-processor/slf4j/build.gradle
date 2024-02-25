@@ -1,8 +1,8 @@
 dependencies {
     implementation project(":core-logging:core-logging")
 
-    implementation group: 'org.slf4j', name: 'slf4j-api', version: "2.0.12"
-    implementation group: 'org.slf4j', name: 'slf4j-simple', version: "2.0.12"
+    api group: 'org.slf4j', name: 'slf4j-api', version: "2.0.12"
+    api group: 'org.slf4j', name: 'slf4j-simple', version: "2.0.12"
 }
 
 test {

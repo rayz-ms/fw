@@ -7,6 +7,6 @@ import com.ggar.core.logging.domain.LogRequest;
 import java.util.Optional;
 import java.util.function.Function;
 
-public interface FindByLogMessagePort<T extends LogId<I>, I> extends Function<LogRequest<T>, Optional<Log<T>>> {
-
+public interface FindByLogMessagePort<T extends LogRequest<I,ID>, L extends Log<I, ID>, I extends LogId<ID>, ID> {
+	Optional<L> process(T request);
 }

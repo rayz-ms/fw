@@ -1,6 +1,10 @@
 dependencies {
     api project(":core-logging:core-logging")
     api 'org.springframework.data:spring-data-jpa:3.2.2'
+    api 'org.springframework.data:spring-data-commons:3.2.2'
+    api 'org.hibernate.orm:hibernate-core:6.4.4.Final'
+    api 'org.springframework:spring-aspects:6.1.4'
+    api 'org.springframework.boot:spring-boot-starter-aop:3.2.2'
 }
 
 test {

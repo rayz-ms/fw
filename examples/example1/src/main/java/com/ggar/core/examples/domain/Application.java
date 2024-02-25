@@ -1,5 +1,8 @@
 package com.ggar.core.examples.domain;
 
-public interface Application {
-	String get();
+public class Application extends Field<String> implements ApplicationBase {
+
+	public Application(String get) {
+		super(get);
+	}
 }

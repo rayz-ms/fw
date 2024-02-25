@@ -1,12 +1,4 @@
-import com.ggar.core.logging.domain.*;
-import com.ggar.core.logging.processor.LogLevels;
-import com.ggar.core.logging.processor.Slf4jLogger;
-import com.ggar.core.logging.repository.FindByLogMessagePort;
 import org.junit.jupiter.api.Test;
-
-import java.nio.charset.StandardCharsets;
-import java.util.Locale;
-import java.util.Optional;
 
 public class Slf4jLoggerTests {
 

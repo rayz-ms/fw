@@ -1,14 +1,12 @@
 package com.ggar.core.logging.domain;
 
-import org.immutables.value.Value;
-
 import java.nio.charset.Charset;
 import java.util.Locale;
-import java.util.Optional;
 
-public interface LogRequest<T extends LogId<?>> {
+public interface LogRequest<I extends LogId<ID>, ID> {
 
-	Optional<Charset> charset();
-	Optional<Locale > locale();
+	I logId();
+	Charset charset();
+	Locale locale();
 
 }

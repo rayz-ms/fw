@@ -5,10 +5,15 @@ include "core-logging:core-logging-adapter:spring-data-jpa"
 include "core-logging:core-logging-processor:slf4j"
 
 include "examples"
-new File("$rootDir/examples").listFiles().each {
-    def moduleName = it.name
-    include moduleName
-    if (moduleName != "build") {
-        project(":${moduleName}").projectDir = file("${it.getParentFile().name}/${moduleName}")
-    }
+//new File("$rootDir/examples").listFiles().each {
+//    def moduleName = it.name
+//    include moduleName
+//    if (!Arrays.asList("build", "build.gradle", "example1:build.gradle", ".", "..").contains(moduleName) && Files.isDirectory(Paths.get("$rootDir/examples/" + moduleName))) {
+//        project(":${moduleName}").projectDir = file("${it.getParentFile().name}/${moduleName}")
+//    }
+//}
+
+file('examples').eachDir {dir ->
+    include ":examples:${dir.name}"
+    project(":examples:${dir.name}").projectDir = dir
 }

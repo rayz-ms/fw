@@ -1,6 +1,9 @@
 package com.ggar.core.logging.adapter.domain;
 
-import com.ggar.core.logging.domain.Log;
+import com.ggar.core.logging.domain.LogId;
 
-public class LogEntity {
+public interface LogEntity<ID> {
+
+	ID id();
+
 }

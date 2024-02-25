@@ -1,6 +1,15 @@
+plugins {
+    id("org.springframework.boot") version "3.2.2"
+}
+
 dependencies {
+    implementation(project(":core-logging:core-logging-adapter:spring-data-jpa")) {
+        exclude group: 'ch.qos.logback', module: 'logback-classic'
+    }
+    implementation project(":core-logging:core-logging-processor:slf4j")
+
     implementation 'com.h2database:h2:2.2.224'
-    implementation project(":core-logging:core-logging-adapter:spring-data-jpa")
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.3.3'
     implementation 'org.springframework.boot:spring-boot-autoconfigure:3.2.2'
     implementation 'org.springframework.boot:spring-boot:3.2.2'
 
@@ -8,4 +17,18 @@ dependencies {
     compileOnly group: 'org.immutables', name: 'value', version: '2.10.0'
     annotationProcessor group: 'org.immutables', name: 'builder', version: '2.10.0'
     compileOnly group: 'org.immutables', name: 'builder', version: '2.10.0'
+    annotationProcessor group: 'org.immutables', name: 'annotate', version: '2.10.0'
+    compileOnly group: 'org.immutables', name: 'annotate', version: '2.10.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testCompileOnly 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+    implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+}
+
+configurations {
+    compile.exclude group: 'ch.qos.logback', module: 'logback-classic'
+    runtime.exclude group: 'ch.qos.logback', module: 'logback-classic'
 }
