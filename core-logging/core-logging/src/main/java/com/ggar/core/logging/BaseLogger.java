@@ -7,11 +7,8 @@ import com.ggar.core.logging.processor.LogProcessor;
 import com.ggar.core.logging.repository.FindByLogMessagePort;
 import com.ggar.core.logging.service.Logger;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Function;
-import java.util.stream.StreamSupport;
 
 public class BaseLogger<T extends LogRequest<I, ID>, L extends Log<I, ID>, I extends LogId<ID>, ID> implements Logger<T,L,I,ID> {
 

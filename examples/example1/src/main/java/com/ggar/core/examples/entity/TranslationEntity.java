@@ -3,10 +3,8 @@ package com.ggar.core.examples.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.hibernate.proxy.HibernateProxy;
 
 import java.util.Locale;
-import java.util.Objects;
 
 @Entity(name = "translation")
 @NoArgsConstructor

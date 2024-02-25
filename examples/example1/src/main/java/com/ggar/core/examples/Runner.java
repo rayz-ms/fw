@@ -1,20 +1,15 @@
 package com.ggar.core.examples;
 
 import com.ggar.core.examples.domain.Application;
-import com.ggar.core.examples.domain.Log;
-import com.ggar.core.examples.domain.LogId;
-import com.ggar.core.examples.domain.Request;
 import com.ggar.core.examples.domain.System;
+import com.ggar.core.examples.domain.*;
 import com.ggar.core.examples.entity.*;
 import com.ggar.core.examples.repository.LogRepository;
-import com.ggar.core.logging.BaseLogger;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Locale;
 

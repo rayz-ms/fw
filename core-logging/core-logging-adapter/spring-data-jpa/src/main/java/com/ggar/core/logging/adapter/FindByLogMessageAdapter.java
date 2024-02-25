@@ -7,8 +7,6 @@ import com.ggar.core.logging.domain.LogRequest;
 import com.ggar.core.logging.repository.FindByLogMessagePort;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
-
 public abstract class FindByLogMessageAdapter<T extends LogRequest<I,ID>, L extends Log<I, ID>, I extends LogId<ID>, ID> implements FindByLogMessagePort{
 
 	protected final JpaRepository<? extends LogEntity<ID>, I> repository;

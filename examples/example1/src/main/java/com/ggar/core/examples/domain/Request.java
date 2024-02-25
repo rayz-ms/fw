@@ -5,7 +5,6 @@ import com.ggar.core.logging.domain.LogRequest;
 import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
-import org.immutables.value.Value;
 
 import java.nio.charset.Charset;
 import java.util.Locale;

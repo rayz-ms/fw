@@ -1,11 +1,9 @@
 package com.ggar.core.examples.entity;
 
-import jakarta.persistence.Entity;
 import lombok.*;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 
-import java.io.Serial;
 import java.io.Serializable;
 
 @NoArgsConstructor

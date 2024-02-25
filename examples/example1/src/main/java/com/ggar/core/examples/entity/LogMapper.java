@@ -4,7 +4,9 @@ import com.ggar.core.examples.domain.Application;
 import com.ggar.core.examples.domain.Log;
 import com.ggar.core.examples.domain.LogId;
 import com.ggar.core.examples.domain.System;
-import org.mapstruct.*;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.ReportingPolicy;
 
 import java.nio.charset.Charset;
 import java.util.Locale;
