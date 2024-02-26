@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://${SPRING_DATASOURCE_HOST}/${SPRING_DATASOURCE_SCHEMA}
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate
+  sql:
+    init:
+      mode: never

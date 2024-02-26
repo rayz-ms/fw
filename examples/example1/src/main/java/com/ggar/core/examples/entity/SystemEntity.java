@@ -10,12 +10,11 @@ import java.io.Serializable;
 @Entity(name = "system")
 @Table
 @AllArgsConstructor
-@NoArgsConstructor
+@NoArgsConstructor(force = true)
 @Getter
 @Setter
 @ToString
-@FieldDefaults(level = AccessLevel.PRIVATE)
-@Builder(toBuilder = true)
+@FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
 @With
 @Accessors(fluent = true)
 public class SystemEntity implements Serializable {
@@ -24,7 +23,7 @@ public class SystemEntity implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id;
 
-	@Column(nullable = false, length = 25)
+	@Column(nullable = false, length = 25, unique = true)
 	String name;
 
 }

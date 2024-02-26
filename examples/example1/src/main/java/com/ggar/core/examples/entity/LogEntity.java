@@ -6,17 +6,19 @@ import lombok.experimental.Accessors;
 import lombok.experimental.FieldDefaults;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity(name = "log")
 @Table
 @AllArgsConstructor
-@Builder(toBuilder = true, access = AccessLevel.PUBLIC)
-@NoArgsConstructor
+@With
+@NoArgsConstructor(force = true)
 @Setter
 @Getter
 @ToString
-@FieldDefaults(level = AccessLevel.PRIVATE)
+@FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
 @Accessors(fluent = true)
 public class LogEntity implements Serializable {
 
@@ -24,10 +26,10 @@ public class LogEntity implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.MERGE)
 	ApplicationEntity application;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.MERGE)
 	SystemEntity system;
 
 	@Column(length = 1)
@@ -35,6 +37,16 @@ public class LogEntity implements Serializable {
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@ToString.Exclude
-	Set<TranslationEntity> translations;
+	Set<TranslationEntity> translations = new HashSet<>();
 
+	public LogEntity withTranslations(TranslationEntity... translations) {
+		this.translations.clear();
+		this.translations.addAll(Arrays.asList(translations));
+		return this;
+	}
+
+	public LogEntity withTranslation(TranslationEntity translation) {
+		this.translations.add(translation);
+		return this;
+	}
 }

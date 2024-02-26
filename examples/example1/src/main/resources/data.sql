@@ -9,5 +9,6 @@
 --     ('utf-8', 'es-ES', 'Received %s', 0)
 -- ;
 
-insert into application(name) values ("application1");
-insert into system(name) values ("system1");
+-- insert into application(name) values ('application1');
+-- insert into `system`(name) values ('system1');
+
