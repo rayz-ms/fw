@@ -8,5 +8,6 @@ public interface LogRequest<I extends LogId<ID>, ID> {
 	I logId();
 	Charset charset();
 	Locale locale();
+	LogLevel level();
 
 }
